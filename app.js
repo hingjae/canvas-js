@@ -26,6 +26,7 @@ function onMove(event) {
   if (isPainting) {
     ctx.lineTo(event.offsetX, event.offsetY);
     ctx.stroke();
+    // ctx.fill();
     return;
   }
   ctx.moveTo(event.offsetX, event.offsetY);
@@ -37,6 +38,7 @@ function startPainting() {
 
 function cancelPainting() {
   isPainting = false;
+  // ctx.fill();
   ctx.beginPath();
 }
 
